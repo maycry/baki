@@ -1,0 +1,29 @@
+.cf:before,
+.cf:after {
+    content: " ";
+    display: table;
+}
+.cf:after {
+    clear: both;
+}
+.cf {
+    *zoom: 1;
+}
+.fotorama__nav-wrap{
+	margin-top: -54px;
+}
+.fotorama .fotorama__nav__frame.fotorama__active .fotorama__dot, .fotorama .fotorama__nav__frame .fotorama__dot{
+	width: 10px;
+	height: 10px;
+	border: 1px solid #b0b0b0;
+}
+.fotorama .fotorama__nav__frame.fotorama__active .fotorama__dot{
+	box-shadow: 0 0 5px #cccccc inset;
+	background-color: #f4f4f4;
+}
+.fotorama__nav--dots .fotorama__nav__frame{
+	width: 24px !important;
+}
+.fotorama__wrap--css3 .fotorama__arr--next, .fotorama__wrap--css3 .fotorama__arr--prev{
+	display: none !important;
+}

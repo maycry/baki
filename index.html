@@ -4,24 +4,29 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 	<link rel="stylesheet" type="text/css" href="css/normalize.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="css/utils.css">
+	<link rel="stylesheet" type="text/css" href="css/media.css">
+	<link rel="stylesheet" type="text/css" href="css/fotorama.css">
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+	<script src="js/fotorama.js"></script>
 </head>
 <body>
 	<header>
-		<div class="menu-top">
+		<div class="menu-top cf">
 			<div class="wrapper">
 				<nav>
 					<a href="/">Оплата и доставка</a>
 					<a href="/">Контакты</a>
 				</nav>
 				<div class="phone">Горячая линия <big>969</big></div>
-				<div class="logo">
-					<img src="images/logo-baki.png">
-					<p>интернет-магазин</p>
-				</div>
+				<a class="logo" href="/">
+					<img class="logo-img" src="images/logo-baki.png">
+					<p class="logo-shop">интернет-магазин</p>
+				</a>
 			</div>	
-			<div style="clear:both"></div>
 		</div>
-		<div class="menu-bottom">
+		<div class="menu-bottom cf">
 			<div class="wrapper">
 				<nav>
 					<a href="/">Личный кабинет</a>
@@ -29,32 +34,68 @@
 					<a href="/">Онлайн консультация</a>
 				</nav>
 				<div class="language-list">
-					<a  class="active" href="/">AZ</a><a href="/">RU</a><a href="/">EN</a>
+					<a class="language-current" href="#">AZ</a>
+					<ul class="language-popup" style="display:none">
+						<li><a href="#">RU</a></li>
+						<li><a href="#">EN</a></li>
+					</ul>
 				</div>
 			</div>
-			<div style="clear:both"></div>
 		</div>
 	</header>
-	<div class="wrapper">
-		<div class="slider">
-			<h1>Каско <span class="orange">Турбокарта</span></h1>
-			<p>Турбокарта позволяет полность в кредит застраховать свой автомобиль и вдобавок получить кредитную линию от «Банка Республики» под всего лишь 9% годовых. Закажите прямо сейчас!</p>
-			<a href="/">Рассчитать стоимость →</a>
-		</div>
-		<div class="side-block">
-			<div class="side-block-top">
-				<h2>Купить полис онлайн</h2>
-				<p>Расчитайте стоимость и купите полис онлайн</p>
-				<nav>
-					<div class="product"><a href="/"><img src="images/icon-car.png"> Каско</a></div>
-					<div class="product"><a href="/"><img src="images/icon-trip.png">Имущество</a></div>
-					<div class="product"><a href="/"><img src="images/icon-palm.png">Путешествие</a></div>
-				</nav>
+	<div class="wrapper cf">
+		<div class="col-3-4">
+			<div class="slider">
+				<div class="fotorama" data-height="377px" data-width="100%" data-nav="dots" data-fit="none" data-arrows="none" data-shadows="none">
+					<div class="slide">
+						<div class="slide-image">
+							<img src="images/slider-1.jpg">
+						</div>
+						<div class="slide-content">
+							<h1>Каско <span class="orange">Турбокарта</span></h1>
+							<p>Турбокарта позволяет полность в кредит застраховать свой автомобиль и вдобавок получить кредитную линию от «Банка Республики» под всего лишь 9% годовых. Закажите прямо сейчас!</p>
+							<a href="/">Рассчитать стоимость →</a>
+						</div>
+					</div>
+					<div class="slide">
+						<div class="slide-image">
+							<img src="images/slider-1.jpg">
+						</div>
+						<div class="slide-content">
+							<h1>Каско <span class="orange">Турбокарта</span></h1>
+							<p>Турбокарта позволяет полность в кредит застраховать свой автомобиль и вдобавок получить кредитную линию от «Банка Республики» под всего лишь 9% годовых. Закажите прямо сейчас!</p>
+							<a href="/">Рассчитать стоимость →</a>
+						</div>
+					</div>
+					<div class="slide">
+						<div class="slide-image">
+							<img src="images/slider-1.jpg">
+						</div>
+						<div class="slide-content">
+							<h1>Каско <span class="orange">Турбокарта</span></h1>
+							<p>Турбокарта позволяет полность в кредит застраховать свой автомобиль и вдобавок получить кредитную линию от «Банка Республики» под всего лишь 9% годовых. Закажите прямо сейчас!</p>
+							<a href="/">Рассчитать стоимость →</a>
+						</div>
+					</div>
+				</div>
 			</div>
-			<div class="side-block-bottom">
-				<a href="/">Личный кабинет →</a>
-			</div>
 		</div>
-</div>
+		<div class="col-1-4">
+			<div class="side-block">
+					<div class="side-block-top">
+						<h2>Купить полис онлайн</h2>
+						<p>Расчитайте стоимость и купите полис онлайн</p>
+						<nav>
+							<div class="product"><a href="/"><img src="images/icon-car.png"> Каско</a></div>
+							<div class="product"><a href="/"><img src="images/icon-trip.png">Имущество</a></div>
+							<div class="product"><a href="/"><img src="images/icon-palm.png">Путешествие</a></div>
+						</nav>
+					</div>
+					<div class="side-block-bottom">
+						<a href="/">Личный кабинет →</a>
+					</div>
+				</div>
+			</div>
+	</div>
 </body>
 </html>

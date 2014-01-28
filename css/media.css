@@ -1,0 +1,16 @@
+.col-3-4{
+	float: left;
+	width: 75%;
+}
+.col-1-4{
+	float: left;
+	width: 25%;
+}
+.col-1-2{
+	float: left;
+	width: 50%;
+}
+.col-1-5{
+	float: left;
+	width: 20%;
+}
