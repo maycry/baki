@@ -9,7 +9,8 @@ h1{
 }
 h2{
 	font-size: 24px;
-	line-height: 35px;
+	line-height: 28px;
+	margin-bottom:0;
 }
 .orange{
 	color: #f78221;
@@ -21,7 +22,7 @@ h2{
 	max-width: 1280px;
 	position: relative;
 }
-nav{
+.menu-top nav, .menu-bottom nav{
 	margin-left: 25%;
 	padding-left: 40px;
 	float: left;
@@ -155,12 +156,54 @@ nav{
 }
 .side-block{
 	background: white;
-	width: 17%;
-	height: 321px;
+	width: 23%;
 	box-shadow: 0 1px 2px rgba(0, 0, 0, .25);
 	border-radius: 4px;
 	float: right;
 	margin-top: 40px;
-	padding: 0 3%;
 }
+.side-block-top{
+	padding: 5px 15% 0;
+}
+.side-block-top p{
+	font-size: 13px;
+	margin-top: 9px;
+	line-height: 18px;
+	height: 43px;
+}
+.side-block-top nav .product{
+	margin-bottom: 25px;
+}
+.side-block-top nav .product a{
+	color: black;
+	margin: 10px 0;
+	text-decoration: none;
+	border-bottom: solid 1px #c9c9c9;
+	margin-left: 50px;
+}
+.side-block-top nav .product a img{
+	margin-left: -50px;
+	margin-right: 15px;
+	vertical-align: -5px;
+}
+.side-block-bottom a{
+	border-top: 1px solid #f88c53;
+	display: block;
+	color: white;
+	line-height: 55px;
+	text-decoration: none;
+	border-radius: 0 0 4px 4px;
+	padding: 0 17%;
+	box-shadow: 0 1px 2px rgba(0, 0, 0, .17);
+	background: #f79026; /* Old browsers */
+	background: -moz-linear-gradient(top, #f79026 0%, #f56c1c 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f79026), color-stop(100%,#f56c1c)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #f79026 0%,#f56c1c 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #f79026 0%,#f56c1c 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #f79026 0%,#f56c1c 100%); /* IE10+ */
+	background: linear-gradient(to bottom, #f79026 0%,#f56c1c 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f79026', endColorstr='#f56c1c',GradientType=0 ); /* IE6-9 */
+	
+}
+
 
