@@ -20,12 +20,12 @@ jQuery(document).ready(function($) {
 	$(".language-popup").click(function(event) {
 		event.stopPropagation();
 	});
-	window.onkeyup = function (event) {
-		if (event.keyCode == 27) {
+	$(document).bind('keydown', function(e) { 
+    if (e.which == 27) {
 			$(".language-popup").hide();
 			$(".language-current").removeClass('active');
-		}
-	}
+    }
+  });
 	$("html").click(function(event) {
 		$(".language-popup").hide();
 		$(".language-current").removeClass('active');
@@ -34,7 +34,6 @@ jQuery(document).ready(function($) {
 
 
 	/*-------tabs-start-------*/
-
 	$(".tabs a").click(function(event) {
 		$(".tabs a").removeClass('hover');
 		$(".tabs a").removeClass('active');
@@ -56,5 +55,41 @@ jQuery(document).ready(function($) {
 	/*-------tabs-end-------*/
 
 
+	/*-------products-group-start-------*/
+	$(".product-kasko").click(function(event) {
+		$(this).toggleClass('product-active');
+		$(".slider").toggle();
+		$(".products-all-group").toggle();
 
+	});
+	$(document).bind('keydown', function(e) { 
+    if (e.which == 27) {
+			$(".product-kasko").removeClass('product-active');
+			$(".slider").show();
+			$(".products-all-group").hide();
+    }
+  });
+	/*-------products-group-end-------*/
+	
+
+	/*-------overlay-start-------*/
+	$(".overlay-popup .close").click(function(event) {
+		$("body").removeClass('overlay-enabled');
+	});
+	$(document).bind('keydown', function(e) { 
+    if (e.which == 27) {
+			$("body").removeClass('overlay-enabled');
+    }
+  });
+	$(".overlay-popup").click(function(event) {
+		event.stopPropagation();
+	});
+	$("html").click(function(event) {
+		$("body").removeClass('overlay-enabled');
+	});
+	$(".js-open-login").click(function(event) {
+		event.stopPropagation();
+		$("body").addClass('overlay-enabled');
+	});
+	/*-------overlay-end-------*/
 });
