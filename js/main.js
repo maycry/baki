@@ -61,6 +61,8 @@ jQuery(document).ready(function($) {
 		$(".slider").toggle();
 		$(".products-all-group").toggle();
 
+		return false;
+
 	});
 	$(document).bind('keydown', function(e) { 
     if (e.which == 27) {
@@ -75,6 +77,7 @@ jQuery(document).ready(function($) {
 	/*-------overlay-start-------*/
 	$(".overlay-popup .close").click(function(event) {
 		$("body").removeClass('overlay-enabled');
+		return false;
 	});
 	$(document).bind('keydown', function(e) { 
     if (e.which == 27) {
@@ -83,13 +86,16 @@ jQuery(document).ready(function($) {
   });
 	$(".overlay-popup").click(function(event) {
 		event.stopPropagation();
+		return false;
 	});
 	$("html").click(function(event) {
 		$("body").removeClass('overlay-enabled');
+		return false;
 	});
 	$(".js-open-login").click(function(event) {
 		event.stopPropagation();
 		$("body").addClass('overlay-enabled');
+		return false;
 	});
 	/*-------overlay-end-------*/
 });

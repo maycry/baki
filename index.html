@@ -6,8 +6,14 @@
 	<link rel="stylesheet" type="text/css" href="css/normalize.css">
 	<link rel="stylesheet" type="text/css" href="css/fotorama.css">
 	<link rel="stylesheet" type="text/css" href="css/utils.css">
+	<link rel="stylesheet" type="text/css" href="css/header.css">
+	<link rel="stylesheet" type="text/css" href="css/slider.css">
+	<link rel="stylesheet" type="text/css" href="css/side-block.css">
+	<link rel="stylesheet" type="text/css" href="css/about.css">
+	<link rel="stylesheet" type="text/css" href="css/forms.css">
+	<link rel="stylesheet" type="text/css" href="css/overlay.css">
+	<link rel="stylesheet" type="text/css" href="css/footer.css">
 	<link rel="stylesheet" type="text/css" href="css/media.css">
-	<link rel="stylesheet" type="text/css" href="css/main.css">
 	<script type="text/javascript" src="js/jquery.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
 	<script src="js/fotorama.js"></script>
@@ -17,19 +23,20 @@
   <![endif]-->
 </head>
 <body>
+	<!-- Login popup Start -->
 	<div class="overlay">
 		<div class="overlay-popup overlay-popup-login">
 			<i class="close"></i>
+			<h2>Вход в личный кабинет</h2>
 			<form>
-				<h2>Вход в личный кабинет</h2>
-				<table class="form login">
-					<tr>
+				<table class="form">
+					<tr class="invalid">
 						<td class="label"><label for="login">Имейл</label></td>
-						<td class="field invalid"><input name="login" type="text"></td>
+						<td class="field"><input name="login" type="text"><i>Неправильный имейл</i></td>
 					</tr>
 					<tr>
 						<td class="label"><label for="password">Пароль</label></td>
-						<td class="field"><input name="password" type="password"></td>
+						<td class="field"><input name="password" type="password"><i>Неправильный пароль</i></td>
 					</tr>
 					<tr>
 						<td></td>
@@ -40,24 +47,23 @@
 		</div>
 		<div class="overlay-color"></div>
 	</div>
+	<!-- Login popup End -->
+
 	<header>
 		<div class="menu-top cf">
 			<div class="wrapper">
+				<a class="logo" href="/"></a>
 				<nav>
 					<a href="/">Оплата и доставка</a>
 					<a href="/">Контакты</a>
 				</nav>
 				<div class="phone">Горячая линия <big>012 969</big></div>
-				<a class="logo" href="/">
-					<img class="logo-img" src="images/logo-baki.png">
-					<p class="logo-shop">интернет-магазин</p>
-				</a>
 			</div>	
 		</div>
 		<div class="menu-bottom cf">
 			<div class="wrapper">
 				<nav>
-					<a href="#" class="js-open-login">Личный кабинет</a>
+					<a href="#" class="js-open-login pseudo">Личный кабинет</a>
 					<a href="/">Перезвоните мне</a>
 					<a href="/">Онлайн консультация</a>
 				</nav>
@@ -71,27 +77,34 @@
 			</div>
 		</div>
 	</header>
+
 	<div class="wrapper cf">
 		<div class="col-3-4">
 			<div class="slider">
 				<div class="fotorama" data-height="325px" data-width="100%" data-nav="dots" data-fit="none" data-arrows="none" data-shadows="none">
 					<div class="slide">
 						<div class="slide-image">
-							<img src="images/slider-1.jpg">
+							<img class="slide-image-product" src="images/slider-1.jpg">
+							<img class="slide-image-uzor" src="images/buta1.png">
 						</div>
 						<div class="slide-content">
-							<h1><a href="#">Каско <span class="orange">Турбокарта</span></a></h1>
-							<p>Турбокарта позволяет полность в кредит застраховать свой автомобиль и вдобавок получить кредитную линию от «Банка Республики» под всего лишь 9% годовых. Закажите прямо сейчас!</p>
+							<div class="slide-text">
+								<h1><a href="#">Каско <span class="orange">Турбокарта</span></a></h1>
+								<p>Турбокарта позволяет полность в кредит застраховать свой автомобиль и вдобавок получить кредитную линию от «Банка Республики» под всего лишь 9% годовых. Закажите прямо сейчас!</p>
+							</div>
 							<a class="button button-onmain" href="#">Рассчитать стоимость →</a>
 						</div>
 					</div>
 					<div class="slide">
 						<div class="slide-image">
-							<img src="images/slider-1.jpg">
+							<img class="slide-image-product" src="images/slider-1.jpg">
+							<img class="slide-image-uzor" src="images/buta1.png">
 						</div>
 						<div class="slide-content">
-							<h1><a href="#">Каско <span class="orange">Турбокарта</span></a></h1>
-							<p>Турбокарта позволяет полность в кредит застраховать свой автомобиль и вдобавок получить кредитную линию от «Банка Республики» под всего лишь 9% годовых. Закажите прямо сейчас!</p>
+							<div class="slide-text">
+								<h1><a href="#">Каско <span class="orange">Турбокарта</span></a></h1>
+								<p>Турбокарта позволяет полность в кредит застраховать свой автомобиль и вдобавок получить кредитную линию от «Банка Республики» под всего лишь 9% годовых. Закажите прямо сейчас!</p>
+							</div>
 							<a class="button button-onmain" href="#">Рассчитать стоимость →</a>
 						</div>
 					</div>
@@ -143,7 +156,7 @@
 						<p>Расчитайте стоимость и купите полис онлайн</p>
 					</div>
 					<nav>
-						<div class="product product-kasko"><a href="#">Каско</a></div>
+						<div class="product product-kasko"><a class="pseudo" href="#">Каско</a></div>
 						<div class="product product-property"><a href="#">Имущество</a></div>
 						<div class="product product-trip"><a href="#">Путешествие</a></div>
 					</nav>
@@ -153,6 +166,7 @@
 				</div>
 			</div>
 	</div>
+
 	<div class="wrapper">
 		<div class="about cf">
 			<h3>Как это работает</h3>
@@ -160,63 +174,54 @@
 				<a class="active" href="#" data-block="tabs-1">Расчет и покупка</a><a href="#" data-block="tabs-2">Оплата</a><a href="#" data-block="tabs-3">Доставка</a>	
 		</div>
 			<div class="tab-content tabs-1">
-				<div class="step">
-					<img src="images/clock1.png">
+				<div class="step step-icon-1">
 					<h4><span class="grey">1.</span> Расчитайте стоимость</h4>
 					<p>Всего за 2 минуты вы можете посчитать стоимость КАСКО</p>
 				</div>
-				<div class="step">
-					<img src="images/clock2.png">
+				<div class="step step-icon-2">
 					<h4><span class="grey">2.</span> Выбираете опции</h4>
 					<p>Еще за 3 минуты вы подберете комфортную стоимость полиса за счет добавления и удаления сервисных опций</p>
 				</div>
-				<div class="step">
-					<img src="images/clock3.png">
+				<div class="step step-icon-3">
 					<h4><span class="grey">3.</span> Вводите<br>персональные<br>данные</h4>
 					<p>Если вам лень, вы можете просто прикрепить к заказу сканы нужных документов</p>
 				</div>
-				<div class="step">
-					<img src="images/clock4.png">
+				<div class="step step-icon-4">
 					<h4><span class="grey">4.</span> Оплачиваете</h4>
 					<p>Мы работаем с процессингом «Альфа Банка»</p>
 				</div>
-				<div class="step step-last">
-					<img src="images/clock5.png">
+				<div class="step step-icon-5 step-last">
 					<h4><span class="grey">5.</span> Получаете полис</h4>
 					<p>Можете распечатать полис с электронной цифровой подписью, получить в офисе Allianz, или выбрать доставку с курьером</p>
 				</div>
 			</div>
 			<div class="tab-content tabs-2 step-bigger" style="display:none">
-				<div class="step step-bigger">
-					<img src="images/clock1.png">
+				<div class="step step-icon-1 step-bigger">
 					<h4>Расчитайте стоимость</h4>
 					<p>Всего за 2 минуты вы можете посчитать стоимость КАСКО</p>
 				</div>
-				<div class="step step-bigger step-last">
-					<img src="images/clock1.png">
+				<div class="step step-icon-1 step-bigger step-last">
 					<h4>Расчитайте стоимость</h4>
 					<p>Всего за 2 минуты вы можете посчитать стоимость КАСКО</p>
 				</div>
 			</div>
 			<div class="tab-content tabs-3" style="display:none">
-				<div class="step step-bigger">
-					<img src="images/clock1.png">
+				<div class="step step-icon-1 step-bigger">
 					<h4>Расчитайте стоимость</h4>
 					<p>Всего за 2 минуты вы можете посчитать стоимость КАСКО</p>
 				</div>
-				<div class="step step-bigger">
-					<img src="images/clock1.png">
+				<div class="step step-icon-1 step-bigger">
 					<h4>Расчитайте стоимость</h4>
 					<p>Всего за 2 минуты вы можете посчитать стоимость КАСКО</p>
 				</div>
-				<div class="step step-bigger step-last">
-					<img src="images/clock1.png">
+				<div class="step step-icon-1 step-bigger step-last">
 					<h4>Расчитайте стоимость</h4>
 					<p>Всего за 2 минуты вы можете посчитать стоимость КАСКО</p>
 				</div>
 			</div>
 		</div>
 	</div>	
+
 	<footer>
 		<div class="wrapper cf">
 			<p>Cделано в <a class="incore" href="http://in-core.com.ua/"></a></p>

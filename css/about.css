@@ -1,0 +1,113 @@
+
+.about{
+	background: white;
+	width: 92%;
+	box-shadow: 0 1px 2px rgba(0, 0, 0, .25);
+	margin-top: 40px;
+	padding: 20px 3% 45px 5%;
+	border-radius: 4px;
+}
+.about h3{
+	font-size: 28px;
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+
+
+/*------------Tabs-----------*/
+.tabs{
+	text-align: center;
+}
+.tabs a{
+	display: inline-block;
+	width: 120px;
+	line-height: 39px;
+	border: 1px solid #cccccc;
+	color: #464646;
+	text-decoration: none;
+	font-size: 14px;
+	padding: 0 34px;
+	text-decoration: none;
+	border-left: none;
+}
+.tabs a:first-child{
+	border-radius:3px 0 0 3px; 
+	border-left: 1px solid #cccccc;
+}
+.tabs a:last-child{
+	border-radius: 0 3px 3px 0; 
+}
+.tabs a.active{
+	background-color: #f4f4f4;
+	color: #000000;
+	box-shadow: 0 0 5px #cccccc inset;
+	pointer-events: none;
+}
+.tabs a.hover{
+	color: #f26622;
+}
+
+
+
+/*------------Tab content------------*/
+.tab-content{
+	text-align: center;
+	margin-top: 61px;
+}
+.tab-content .step:before{
+	content: "";
+	width: 55px;
+	height: 55px;
+	background: url(../images/all.png);
+	display: block;
+}
+.tab-content .step.step-icon-1:before{
+	background-position: -13px -254px; 
+}
+.tab-content .step.step-icon-2:before{
+	background-position: -71px -254px; 
+}
+.tab-content .step.step-icon-3:before{
+	background-position: -129px -254px; 
+}
+.tab-content .step.step-icon-4:before{
+	background-position: -187px -254px; 
+}
+.tab-content .step.step-icon-5:before{
+	background-position: -245px -254px; 
+}
+.tab-content .step{
+	width: 13%;
+	padding-right: 4%;
+	margin-right: 4%;
+	background: url(../images/line.png) no-repeat 100% 70px;
+	display: inline-block;
+	min-height: 250px;
+	vertical-align: top;
+	text-align: left;
+}
+.tab-content .step-bigger{
+	width: 20%;
+}
+.tab-content  .step-last{
+	padding-right: 0;
+	margin-right: 0;
+	background: none;
+}
+.tab-content .step h4{
+	font-size: 15px;
+	line-height: 18px;
+	margin-bottom: 5px;
+	margin-top: 22px;
+}
+.tab-content .step h4 .grey{
+	color: #a3a3a3;
+	margin-left: -20px;
+	margin-right: 4px;
+}
+.tab-content .step p{
+	font-size: 13px;
+	line-height: 18px;
+	margin: 0;
+}
