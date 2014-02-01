@@ -6,6 +6,7 @@ jQuery(document).ready(function($) {
 		$(this).toggleClass('active');
 		$(this).toggleClass('hover');
 		$(".language-popup").toggle();
+		return false;
 	});
 	$(".language-current").mouseover(function(event) {
 		if (!$(this).hasClass('active')) {
@@ -29,6 +30,7 @@ jQuery(document).ready(function($) {
 	$("html").click(function(event) {
 		$(".language-popup").hide();
 		$(".language-current").removeClass('active');
+		return false;
 	});
 	/*-------languages-end-------*/
 

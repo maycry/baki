@@ -1,9 +1,0 @@
-.menu-bottom{
-	border-bottom: 1px solid #e8e8e8;
-}
-.logo, .products-all-group .product-wrapper .product, .slider, .side-block, .about{
-	border: 1px solid #e8e8e8;
-}
-.logo:hover{
-	padding: 10px 0;
-}
