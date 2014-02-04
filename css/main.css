@@ -1096,7 +1096,6 @@ html, body {
 }
 .page-wrapper {
   min-height: 100%;
-  /* equal to footer height */
   margin-bottom: -129px; 
 }
 .page-wrapper:after {
@@ -1104,7 +1103,6 @@ html, body {
   display: block;
 }
 .page-wrapper:after {
-  /* .push must be the same height as footer */
   height: 129px; 
 }
 
