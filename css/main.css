@@ -1497,7 +1497,7 @@ footer .incore:hover{
 .overlay-login .overlay-popup{
 	width: 460px;
 	margin-left: -250px;
-	padding: 30px 30px 10px 40px;
+	padding: 30px 30px 0px 40px;
 	top: 20%;
 }
 .overlay-login h2{
