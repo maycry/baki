@@ -1204,7 +1204,7 @@ footer .incore:hover{
   width: 220px;
   margin-right: 10px;
 }
-.form .invalid .field input,.form .invalid .field select{
+.form .invalid .field input,.form .invalid .customSelect{
   border-color: #fbbcbc;
   background-color: #ffeaea;
 }
