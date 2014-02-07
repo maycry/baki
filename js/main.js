@@ -1,7 +1,5 @@
 jQuery(document).ready(function($) {
 
-	$('select').customSelect();
-
 	/*-------languages-start-------*/
 	$(".language-current").click(function(event) {
 		event.stopPropagation();

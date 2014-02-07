@@ -1128,13 +1128,21 @@ footer .incore:hover{
 
 
 /*----------Forms-----------*/
+.wizard table{
+  width: 100%;
+}
 .form{
 	width: 100%;
   margin-bottom: 30px;
 }
 .form td{
-	padding: 7px 0 18px;
+	padding: 7px 20px 18px 0;
 	font-size: 14px;
+  vertical-align: top;
+}
+.labelCaption{
+  margin-top: 5px;
+  display: block;
 }
 .form .label{
   width: 38%;
@@ -1161,49 +1169,42 @@ footer .incore:hover{
 .overlay-popup .form .label{
   width: 70px;
 }
-.form .field input{
+.form input[type="textbox"]{
 	border: 1px solid #d9d9d9;
 	box-shadow: 0 1px 2px #eeeeee inset;
   padding: 7px 5px;
-  width: 220px;
   outline: none;
   vertical-align: middle;
   display: inline-block;
   margin-right: 10px;
 }
-.customSelect{
-  border: 1px solid #d9d9d9;
-  box-shadow: 0 1px 2px #eeeeee inset;
-  padding: 7px 5px;
-  width: 220px;
-  outline: none;
-  vertical-align: middle;
-  display: inline-block;
-  margin-right: 10px;
-  height: 17px;
-}
-.customSelect:after{
-  content: "";
-  width: 0; 
-  height: 0; 
-  border-left: 5px solid transparent;
-  border-right: 5px solid transparent;
-  border-top: 5px solid black;
-  vertical-align: -10px;
-}
-.form .field-small input{
-  width: 110px;
-}
-.form .field-big input{
+.size-l{
   width: 300px;
 }
-.form .select select{
+.size-m{
   width: 220px;
-  margin-right: 10px;
 }
-.form .invalid .field input,.form .invalid .customSelect{
-  border-color: #fbbcbc;
-  background-color: #ffeaea;
+.size-s{
+  width: 110px;
+}
+.form .calendar-date{
+  display: inline-block;
+  background: url(../images/date.png) center center no-repeat;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  vertical-align: -5px;
+}
+.form input[type="checkbox"], .form input[type="radio"]{
+  vertical-align: 2px;
+}
+.form label{
+  margin-top: 6px;
+  margin-bottom: 5px;
+  display: inline-block;
+}
+.form select{
+  margin-right: 10px;
 }
 .form textarea{
   outline: none;
@@ -1214,16 +1215,10 @@ footer .incore:hover{
   padding: 7px 5px;
   margin-right: 10px;
 }
-.form .invalid em{
-  display: none;
-}
 .form .submit{
 	padding-top: 15px;
 }
-.form i{
-	display: none;
-}
-.form .invalid i{
+.error{
 	font-size: 13px;
 	display: inline-block;
 	font-style: normal;
@@ -1231,22 +1226,22 @@ footer .incore:hover{
 	vertical-align: middle;
 	position: relative;
 }
-.form .field-group a{
-  color: #f26221;
+.form .wizard_step_title{
   border-bottom-width: 1px;
+  color: #f26221;
   font-size: 18px;
   font-weight: bold;
   text-decoration: none;
-  border-bottom-color: #fcc097;
   line-height: 25px;
+  border-bottom: 1px dashed #fcc097;
+  display: inline-block;
+  margin-bottom: 10px;
+  margin-top: 10px;
 }
-.form .field-group .label{
-  padding-bottom: 17px;
-}
-.form .field-group a:hover{
+.form .wizard_step_title:hover{
   border-bottom-color: #f26221;
 }
-.field-group a:before{
+.form .wizard_step_title:before{
   content: "";
   display: block;
   width: 32px;
@@ -1254,7 +1249,7 @@ footer .incore:hover{
   background: url(../images/all.png) -201px -315px;
   position: absolute;
   margin-left: -32px;
-  margin-top: -2px;
+  margin-top: -1px;
 }
 .form .separator hr{
   margin-top: 15px;
@@ -1305,6 +1300,215 @@ footer .incore:hover{
 }
 .form-hide{
   margin-bottom: 0px;
+}
+
+
+/* Overlays */
+.ui-widget-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.ui-datepicker {
+  width: 17em;
+  padding: .2em .2em 0;
+  display: none;
+  box-shadow: 0 1px 10px #444;
+}
+.ui-datepicker .ui-datepicker-header {
+  position: relative;
+  padding: .2em 0;
+}
+.ui-datepicker .ui-datepicker-prev,
+.ui-datepicker .ui-datepicker-next {
+  position: absolute;
+  top: 2px;
+  width: 1.8em;
+  height: 1.8em;
+}
+.ui-datepicker .ui-datepicker-prev-hover,
+.ui-datepicker .ui-datepicker-next-hover {
+  top: 1px;
+}
+.ui-datepicker .ui-datepicker-prev {
+  left: 2px;
+}
+.ui-datepicker .ui-datepicker-next {
+  right: 2px;
+}
+.ui-datepicker .ui-datepicker-prev-hover {
+  left: 1px;
+}
+.ui-datepicker .ui-datepicker-next-hover {
+  right: 1px;
+}
+.ui-datepicker .ui-datepicker-prev span,
+.ui-datepicker .ui-datepicker-next span {
+  display: block;
+  position: absolute;
+  left: 50%;
+  margin-left: -8px;
+  top: 50%;
+  margin-top: -8px;
+}
+.ui-datepicker .ui-datepicker-title {
+  margin: 0 2.3em;
+  line-height: 1.8em;
+  text-align: center;
+}
+.ui-datepicker .ui-datepicker-title select {
+  font-size: 1em;
+  margin: 1px 0;
+}
+.ui-datepicker select.ui-datepicker-month,
+.ui-datepicker select.ui-datepicker-year {
+  width: 49%;
+}
+.ui-datepicker table {
+  width: 100%;
+  font-size: .9em;
+  border-collapse: collapse;
+  margin: 0 0 .4em;
+}
+.ui-datepicker th {
+  padding: .7em .3em;
+  text-align: center;
+  font-weight: bold;
+  border: 0;
+}
+.ui-datepicker td {
+  border: 0;
+  padding: 1px;
+}
+.ui-datepicker td span,
+.ui-datepicker td a {
+  display: block;
+  padding: .2em;
+  text-align: right;
+  text-decoration: none;
+}
+.ui-datepicker .ui-datepicker-buttonpane {
+  background-image: none;
+  margin: .7em 0 0 0;
+  padding: 0 .2em;
+  border-left: 0;
+  border-right: 0;
+  border-bottom: 0;
+}
+.ui-datepicker .ui-datepicker-buttonpane button {
+  float: right;
+  margin: .5em .2em .4em;
+  cursor: pointer;
+  padding: .2em .6em .3em .6em;
+  width: auto;
+  overflow: visible;
+}
+.ui-datepicker .ui-datepicker-buttonpane button.ui-datepicker-current {
+  float: left;
+}
+
+/* with multiple calendars */
+.ui-datepicker.ui-datepicker-multi {
+  width: auto;
+}
+.ui-datepicker-multi .ui-datepicker-group {
+  float: left;
+}
+.ui-datepicker-multi .ui-datepicker-group table {
+  width: 95%;
+  margin: 0 auto .4em;
+}
+.ui-datepicker-multi-2 .ui-datepicker-group {
+  width: 50%;
+}
+.ui-datepicker-multi-3 .ui-datepicker-group {
+  width: 33.3%;
+}
+.ui-datepicker-multi-4 .ui-datepicker-group {
+  width: 25%;
+}
+.ui-datepicker-multi .ui-datepicker-group-last .ui-datepicker-header,
+.ui-datepicker-multi .ui-datepicker-group-middle .ui-datepicker-header {
+  border-left-width: 0;
+}
+.ui-datepicker-multi .ui-datepicker-buttonpane {
+  clear: left;
+}
+.ui-datepicker-row-break {
+  clear: both;
+  width: 100%;
+  font-size: 0;
+}
+
+/* RTL support */
+.ui-datepicker-rtl {
+  direction: rtl;
+}
+.ui-datepicker-rtl .ui-datepicker-prev {
+  right: 2px;
+  left: auto;
+}
+.ui-datepicker-rtl .ui-datepicker-next {
+  left: 2px;
+  right: auto;
+}
+.ui-datepicker-rtl .ui-datepicker-prev:hover {
+  right: 1px;
+  left: auto;
+}
+.ui-datepicker-rtl .ui-datepicker-next:hover {
+  left: 1px;
+  right: auto;
+}
+.ui-datepicker-rtl .ui-datepicker-buttonpane {
+  clear: right;
+}
+.ui-datepicker-rtl .ui-datepicker-buttonpane button {
+  float: left;
+}
+.ui-datepicker-rtl .ui-datepicker-buttonpane button.ui-datepicker-current,
+.ui-datepicker-rtl .ui-datepicker-group {
+  float: right;
+}
+.ui-datepicker-rtl .ui-datepicker-group-last .ui-datepicker-header,
+.ui-datepicker-rtl .ui-datepicker-group-middle .ui-datepicker-header {
+  border-right-width: 0;
+  border-left-width: 1px;
+}
+
+/* Component containers
+----------------------------------*/
+.ui-widget {
+  font-size: 13px;
+}
+.ui-widget .ui-widget {
+  font-size: 1em;
+}
+.ui-state-hover{
+  background-color: #ffe4be;
+}
+.ui-widget input,
+.ui-widget select,
+.ui-widget textarea,
+.ui-widget button {
+  font-size: 1em;
+}
+.ui-widget-content {
+  background: white;
+  color: #333333;
+}
+.ui-widget-content a {
+  color: #333333;
+}
+.ui-widget-header {
+  background: #f26221;
+  color: #ffffff;
+  font-weight: bold;
+}
+.ui-widget-header a {
+  color: #ffffff;
 }
 
 /*-------Form-product-------*/
@@ -1360,12 +1564,11 @@ footer .incore:hover{
 .calc-price p{
   font-size: 13px;
   line-height: 18px;
-  mar
 }
 
 
 /*-------All buttons------*/
-.button, button{
+.button, button, .button35, .postpone, .callagent, .callme{
 	border: 1px solid #d55e18;
 	padding: 0 30px;
 	line-height: 48px;
@@ -1384,6 +1587,11 @@ footer .incore:hover{
 	background: -ms-linear-gradient(top, #f79026 0%,#f56c1c 100%); /* IE10+ */
 	background: linear-gradient(to bottom, #f79026 0%,#f56c1c 100%); /* W3C */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f79026', endColorstr='#f56c1c',GradientType=0 ); /* IE6-9 */
+}
+.postpone, .callagent, .callme{
+  margin-right: 10px;
+  padding: 0 30px;
+  font-size: 14px;
 }
 .button:hover, button:hover{
 	background: #f9a454; /* Old browsers */

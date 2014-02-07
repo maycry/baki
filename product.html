@@ -6,7 +6,6 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 	<script type="text/javascript" src="js/jquery.js"></script>
-	<script type="text/javascript" src="js/jquery.customSelect.min.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
 	<script src="js/fotorama.js"></script>
 	<script src="js/html5shiv.js"></script>
@@ -118,101 +117,112 @@
 			<div class="calc">
 				<div class="calc-form">
 					<h2>Оформление полиса Каско</h2>
-					<form action="." method="post">
-						<table class="form">
-							<tr class="field-group">
-								<td class="label">
-									<a class="pseudo js-form-group" href="#">Расчет стоимости</a>
-								<td class="separator"><hr></td>
-							</tr>
-							<tr>
-								<td class="label">Способ использования ТС</td>
-								<td class="radio-group">
-									<p class="radio">
-										<input type="radio" name="exp" id="1" value="1" checked="checked" >
-										<label for="1">Обычная эксплуатация</label>
-									</p>
-									<p class="radio">
-										<input type="radio" name="exp" id="2" value="2">
-										<label for="2">Временный въезд ТС из других стран Временный въезд ТС из других стран Временный въезд ТС из других стран</label>
-									</p>
-									<p class="radio">
-										<input type="radio" name="exp" id="3" value="3">
-										<label for="3">Следование к месту регистрации</label>
-									</p>
-								</td>
-							</tr>
-							<tr>
-								<td class="label">Способ использования ТС</td>
-								<td class="radio-group">
-									<p class="radio">
-										<input type="checkbox" name="exp" id="4" value="1" checked="checked" >
-										<label for="4">Обычная эксплуатация</label>
-									</p>
-									<p class="radio">
-										<input type="checkbox" name="exp" id="5" value="2">
-										<label for="5">Временный въезд ТС из других стран</label>
-									</p>
-									<p class="radio">
-										<input type="checkbox" name="exp" id="6" value="3">
-										<label for="6">Следование к месту регистрации</label>
-									</p>
-								</td>
-							</tr>
-							<tr class="invalid">
-								<td class="label"><label for="name">Ваше имя</label></td>
-								<td class="field"><input id="name" type="text"><i>Неправильный имейл</i><em>единица</em></td>
-							</tr>
-							<tr class="invalid">
-								<td class="label"><label for="name">Мощность двигателя</label></td>
-								<td class="field field-small"><input id="name" type="text"><i>Неправильный имейл</i><em>л.с.</em></td>
-							</tr>
-							<tr class="invalid">
-								<td class="label"><label>Количество водителей</label></td>
-								<td class="select">
-									<select>
-										<option>1</option>
-										<option>2</option>
-										<option>3</option>
-									</select>
-									<i>Неправильный имейл</i>
-									<em>л.с.</em>
-								</td>
-							</tr>
-						</table>
-						<table class="form">
-							<tr class="field-group">
-								<td class="label">
-									<a class="pseudo js-form-group" href="#">Информация о водителе</a>
-								<td class="separator"><hr></td>
-							</tr>
-							<tr>
-								<td class="label">Водители допущенные к управлению</td>
-								<td class="radio-group">
-									<p class="radio">
-										<input type="radio" name="exp1" id="7" value="1" checked="checked" >
-										<label for="7">Ограниченный круг лиц</label>
-									</p>
-									<p class="radio">
-										<input type="radio" name="exp1" id="8" value="2">
-										<label for="8">Без ограничений</label>
-									</p>
-								</td>
-							</tr>
-							<tr>
-								<td class="label"><label for="as">Мощность двигателя</label></td>
-								<td class="field field-big"><input id="as" type="text"><i>Неправильный имейл</i><em>л.с.</em></td>
-							</tr>
-							<tr>
-								<td class="label"><label for="area">Комментарий</label></td>
-								<td class="textarea"><textarea id="area" rows="5"></textarea><i>Неправильный имейл</i><em>л.с.</em></td>
-							</tr>
-						</table>
-						<div class="form-bottom">
-							<button type="submit">Оформить заказ</button>
+					<div class="form">
+						<div class="wizard">
+							<div class="wizard-step">
+								<a class="wizard_step_title" href="#">Калькулятори</a>
+								<div class="wizard_step_content">
+									<table>
+										<tr>
+											<td width="30%">
+												<span class="labelCaption">Страховая сумма</span>
+											</td>
+											<td>
+												<input type="textbox" id="" name="" class="size-l required valid" maxlength="50">
+											</td>
+										</tr>
+										<tr>
+											<td width="30%">
+												<span class="labelCaption">Условия эксплуатации ТС</span>
+											</td>
+											<td>
+												<input id="" name="" type="checkbox" class="valid">
+												<label for="">Rent-a-car</label>
+												<br />
+												<input id="" name="" type="checkbox" class="valid">
+												<label for="">Автобус</label>
+												<br />
+												<input id="" name="" type="checkbox" class="valid">
+												<label for="">Автобус</label>
+												<br />
+											</td>
+										</tr>
+										<tr>
+											<td width="30%">
+												<span class="labelCaption">Условия эксплуатации ТС</span>
+											</td>
+											<td>
+												<input id="" name="" type="radio" class="valid">
+												<label for="">Rent-a-car</label>
+												<br />
+												<input id="" name="" type="radio" class="valid">
+												<label for="">Автобус</label>
+												<br />
+												<input id="" name="" type="radio" class="valid">
+												<label for="">Автобус</label>
+												<br />
+											</td>
+										</tr>
+									</table>
+								</div>
+							</div>
+							<div class="wizard-step">
+								<a class="wizard_step_title" href="#">Страхувальник</a>
+								<div class="wizard_step_content">
+									<table>
+										<tr>
+											<td width="30%">
+												<span class="labelCaption">Фамилия</span>
+											</td>
+											<td>
+												<input type="textbox" id="" name="" class="size-l required valid" maxlength="50">
+											</td>
+										</tr>
+										<tr>
+											<td width="30%">
+												<span class="labelCaption">Имя</span>
+											</td>
+											<td>
+												<input type="textbox" id="" name="" class="size-l required valid" maxlength="50">
+											</td>
+										</tr>
+										<tr>
+											<td width="30%">
+												<span class="labelCaption">Отчество</span>
+											</td>
+											<td>
+												<input type="textbox" id="" name="" class="size-l required valid" maxlength="50">
+											</td>
+										</tr>
+										<tr>
+											<td width="30%">
+												<span class="labelCaption">Пол</span>
+											</td>
+											<td>
+												<select id="" name="" class="size-m valid">
+													<option value="true" title="Мужчина">Мужчина</option>
+													<option value="false" title="Женщина">Женщина</option>
+												</select>
+											</td>
+										</tr>
+										<tr>
+											<td width="30%">
+												<span class="labelCaption">Дата рождения</span>
+											</td>
+											<td>
+												<input type="textbox" id="" name="" class="size-s dateDE hasDatepicker datepicker valid" mindate="07.02.1914" maxdate="07.02.2114" mask="99.99.9999" watermark="дд.мм.рррр" autocomplete="off">
+												<span class="calendar-date"></span>
+											</td>
+										</tr>
+									</table>
+								</div>
+							</div>
+							<table><tbody><tr><td></td><td align="right"><a href="#next" class="button35"><span>Продолжить</span></a><a href="#save" class="button35" style="display:none"><span>Сохранить</span></a></td></tr></tbody></table>
+							<div class="form-bottom"><a href="#" class="postpone" id="btn_Postpone"><span>Отложить заказ</span></a><a href="#" class="callagent" id="btn_CallAgent"><span>Вызвать агента</span></a><a href="#" class="callme" id="btn_CallBack"><span>Перезвоните мне</span></a></div>
 						</div>
-					</form>
+					</div>
 				</div>
+
 				<div class="calc-price">
 					<h4>Стоимость</h4>
 					<div class="price">346<span>azn</span></div>
