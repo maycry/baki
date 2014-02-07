@@ -432,7 +432,7 @@ table {
 
 body{
 	background-color: #f4f4f4;
-	font-family: Arial, Helvetica, sans-serif;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
 }
 hr{
   border: 0;
@@ -463,9 +463,6 @@ hr{
 	color: #6d6d5e;
 	font-size: 10px;
 	letter-spacing: 1px;
-}
-.logo:hover{
-	height: 29px;
 }
 
 
@@ -543,7 +540,7 @@ hr{
 .language-list .language-current{
 	border: 1px solid #cccccc;
 	color: #f26622;
-	padding: 5px 9px 4px 24px;
+	padding: 5px 22px 4px 9px;
 	font-size: 12px;
 	text-decoration: none;
 	border-radius: 4px;
@@ -563,10 +560,10 @@ hr{
 	color: #000000;
 	box-shadow: 0 0 5px #cccccc inset;
 }
-.language-list .language-current:before{
+.language-list .language-current:after{
 	content: "";
-	top: 8px;
-	left: 11px;
+	top: 9px;
+	left: 31px;
 	position: absolute;
 	display: inline-block;
 	vertical-align: 1px;
@@ -576,7 +573,7 @@ hr{
 	border-width: 5px 5px 0 5px;
 	border-color: #cccccc transparent transparent transparent;
 }
-.language-list .language-current.active:before{
+.language-list .language-current.active:after{
 	border-color: #bbbbbb transparent transparent transparent;
 }
 .language-list .language-popup{
@@ -701,12 +698,12 @@ hr{
 	color: black;
 }
 .slide .slide-content h1{
-	font-size: 50px;
+	font-size: 48px;
 	line-height: 50px;
 	margin-bottom: 15px;
 }
 .slide .slide-content p{
-	font-size: 16px;
+	font-size: 15px;
 	line-height: 26px;
 	width: 60%;
 }
@@ -999,7 +996,7 @@ hr{
 }
 .tabs a{
 	display: inline-block;
-	width: 120px;
+	width: 130px;
 	line-height: 39px;
 	border: 1px solid #cccccc;
 	color: #464646;
@@ -1081,7 +1078,7 @@ hr{
 }
 .tab-content .step h4 .grey{
 	color: #a3a3a3;
-	margin-left: -20px;
+	margin-left: -25px;
 	margin-right: 4px;
 }
 .tab-content .step p{
@@ -1115,7 +1112,7 @@ footer{
 }
 footer p{
 	font-size: 14px;
-	margin-left: 6%;
+	margin-left: 7.1%;
 }
 footer .incore{
 	vertical-align: -11px;
