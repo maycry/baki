@@ -544,6 +544,7 @@ hr{
 	font-size: 12px;
 	text-decoration: none;
 	border-radius: 4px;
+  cursor: pointer;
 }
 .language-list .language-current.hover{
 	background: #fafafa; /* Old browsers */
@@ -562,7 +563,7 @@ hr{
 }
 .language-list .language-current:after{
 	content: "";
-	top: 9px;
+	top: 5px;
 	left: 31px;
 	position: absolute;
 	display: inline-block;
@@ -691,7 +692,20 @@ hr{
 	position: absolute;
 }
 .slide .slide-content .slide-text{
-	height: 208px;
+	height: 221px;
+  width: 60%;
+  margin-bottom: 20px;
+  overflow: hidden;
+  position: relative;
+}
+.slide .slide-content .slide-text:after{
+  content: "";
+  width: 100%;
+  height: 20px;
+  display: block;
+  position: absolute;
+  bottom: 0;
+  background: transparent url(../images/fade.png) repeat-x;
 }
 .slide .slide-content h1 a{
 	text-decoration: none;
@@ -705,7 +719,6 @@ hr{
 .slide .slide-content p{
 	font-size: 15px;
 	line-height: 26px;
-	width: 60%;
 }
 .slide .slide-image{
 	position: absolute;
@@ -744,7 +757,7 @@ hr{
 	padding: 5px 14% 6px;
 }
 .side-block-top h2{
-	font-size: 23px;
+	font-size: 21px;
 	line-height: 28px;
 	margin-bottom:0px;
 }
@@ -764,6 +777,7 @@ hr{
 	margin: 0 7% 5px;
 	padding: 2px 7% 12px;
 	position: relative;
+  font-size: 15px;
 }
 .side-block nav .product.product-active{
 	cursor: pointer;
@@ -940,7 +954,8 @@ hr{
 
 /*----------Bottom----------*/
 .side-block-bottom{
-	margin-top: 17px;
+	margin-top: 19px;
+  font-size: 15px;
 }
 .side-block-bottom a{
 	border-top: 1px solid #f88c53;
@@ -996,7 +1011,7 @@ hr{
 }
 .tabs a{
 	display: inline-block;
-	width: 130px;
+	width: 135px;
 	line-height: 39px;
 	border: 1px solid #cccccc;
 	color: #464646;
@@ -1158,9 +1173,8 @@ footer .incore:hover{
 .form .radio{
   margin-top:0;
 }
-.form .radio input[type="radio"], .form .radio input[type="checkbox"]{
+input[type="radio"], input[type="checkbox"]{
   margin-right: 3px;
-  float: left;
 }
 .form .radio label{
   margin-left: 18px;
@@ -1189,11 +1203,11 @@ input[type="textbox"], input[type="password"]{
 }
 .form .calendar-date{
   display: inline-block;
-  background: url(../images/date.png) center center no-repeat;
-  width: 20px;
-  height: 20px;
+  background: url(../images/all.png) -236px -315px no-repeat;
+  width: 28px;
+  height: 28px;
   cursor: pointer;
-  vertical-align: -5px;
+  vertical-align: -9px;
 }
 .form input[type="checkbox"], .form input[type="radio"]{
   vertical-align: 2px;
@@ -1310,6 +1324,7 @@ input[type="textbox"], input[type="password"]{
   left: 0;
   width: 100%;
   height: 100%;
+  z-index: 5;
 }
 .ui-datepicker {
   width: 17em;
@@ -1408,6 +1423,7 @@ input[type="textbox"], input[type="password"]{
 .ui-datepicker .ui-datepicker-buttonpane button.ui-datepicker-current {
   float: left;
 }
+ui-icon ui-icon-circle-triangle-e
 
 /* with multiple calendars */
 .ui-datepicker.ui-datepicker-multi {
@@ -1449,10 +1465,12 @@ input[type="textbox"], input[type="password"]{
 .ui-datepicker-rtl .ui-datepicker-prev {
   right: 2px;
   left: auto;
+  cursor: pointer;
 }
 .ui-datepicker-rtl .ui-datepicker-next {
   left: 2px;
   right: auto;
+  cursor: pointer;
 }
 .ui-datepicker-rtl .ui-datepicker-prev:hover {
   right: 1px;
@@ -1654,7 +1672,9 @@ input[type="textbox"], input[type="password"]{
   .bread-crumps .bread-crump-item-home:before,
   .bread-crumps .bread-crump-item-last:after,
   .slide .slide-content .more:after,
-  .field-group a:before{
+  .field-group a:before,
+  .form .calendar-date,
+  .form .wizard_step_title:before{
 		background-image: url(../images/all@2x.png);
 		background-size: 319px 472px;
 	}	
@@ -1682,21 +1702,21 @@ input[type="textbox"], input[type="password"]{
 	box-shadow: 0 1px 2px rgba(0, 0, 0, .25);
 	left: 50% !important;
 	margin-left: -250px;
-	z-index: 3;
+	z-index: 6;
 	border-radius: 4px; 
-	padding: 20px 40px;
+	padding: 30px 120px 40px 40px;
 }
  .close_p{
   position: absolute;
-	width: 18px;
-  padding-left: 4px;
-	height: 22px;
+	width: 15px;
+  padding-left: 3px;
+	height: 19px;
 	display: block;
-	right: 8px;
-	top: 7px;
+	right: 10px;
+	top: 9px;
 	cursor: pointer;
   background-color: #f78221;
-  font-size: 16px;
+  font-size: 14px;
   color: white;
   border-radius: 11px;
 }
@@ -1709,20 +1729,57 @@ input[type="textbox"], input[type="password"]{
 	padding: 30px 30px 0px 40px;
 	top: 20%;
 }
+.popup_title{
+  padding-left: 86px;
+}
 .popup_title span{
 	font-size: 21px;
 	line-height: 1.4;
-	margin-bottom: 20px;
-	padding-left: 86px;
+	margin-bottom: 15px;
   display: block;
   font-weight: bold;
 }
-#LogInPopupView_dialog______LogInView___RestorePass{
+#LogInPopupView_dialog______LogInView__{
   padding-left: 88px;
+}
+.cabinetlinks{
+  margin-top: -35px;
+}
+#LogInPopupView_dialog______LogInView___RestorePass{
   color: #f78221;
+  text-decoration: none;
+  line-height: 70px;
+}
+#LogInPopupView_dialog______LogInView___RestorePass span{
+  border-bottom: 1px solid #fcc097;
+}
+#LogInPopupView_dialog______LogInView___RestorePass span:hover{
+  border-bottom-color: #f78221;
+
 }
 #LogInPopupView_dialog______LogInView___LogIn{
-  margin-left: 88px;
+  line-height: 44px;
+}
+#LogInPopupView_dialog______LogInView___LogIn:hover{
+  background: #f9a454; /* Old browsers */
+  background: -moz-linear-gradient(top,  #f9a454 0%, #f57724 75%, #f67d33 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f9a454), color-stop(75%,#f57724), color-stop(100%,#f67d33)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  #f9a454 0%,#f57724 75%,#f67d33 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  #f9a454 0%,#f57724 75%,#f67d33 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  #f9a454 0%,#f57724 75%,#f67d33 100%); /* IE10+ */
+  background: linear-gradient(to bottom,  #f9a454 0%,#f57724 75%,#f67d33 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9a454', endColorstr='#f67d33',GradientType=0 ); /* IE6-9 */
+}
+#LogInPopupView_dialog______LogInView___LogIn:active{
+  box-shadow: 0 1px 3px #af4c15 inset;
+  background: #f79026; /* Old browsers */
+  background: -moz-linear-gradient(top, #f79026 0%, #f56c1c 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f79026), color-stop(100%,#f56c1c)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #f79026 0%,#f56c1c 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #f79026 0%,#f56c1c 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #f79026 0%,#f56c1c 100%); /* IE10+ */
+  background: linear-gradient(to bottom, #f79026 0%,#f56c1c 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f79026', endColorstr='#f56c1c',GradientType=0 ); /* IE6-9 */
 }
 /*--------product----------*/
 .overlay-product .overlay-popup{
@@ -1738,7 +1795,7 @@ input[type="textbox"], input[type="password"]{
 
 /*-----------Utils-------------*/
 .orange{
-	color: #f78221;
+	color: #f15f20;
 }
 .pseudo{
 	border-bottom-style: dashed !important; 
