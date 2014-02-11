@@ -1214,6 +1214,9 @@ select.size-m{
 select.size-s{
   width: 121px;
 }
+.watermarked{
+  color: #aaa;
+}
 .form .calendar-date{
   display: inline-block;
   background: url(../images/all.png) -235px -315px no-repeat;
