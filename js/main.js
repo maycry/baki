@@ -77,12 +77,12 @@ jQuery(document).ready(function($) {
 
 	/*-------overlay-start-------*/
 	$(".overlay-popup .close").click(function(event) {
-		$(".overlay").hide();
+		$(".overlay-2").hide();
 		return false;
 	});
 	$(document).bind('keydown', function(e) { 
     if (e.which == 27) {
-			$(".overlay").hide();
+			$(".overlay-2").hide();
     }
   });
 	$(".overlay-popup").click(function(event) {
@@ -90,7 +90,7 @@ jQuery(document).ready(function($) {
 		return false;
 	});
 	$("html").click(function(event) {
-		$(".overlay").hide();
+		$(".overlay-2").hide();
 	});
 	$(".js-open-login").click(function(event) {
 		event.stopPropagation();
