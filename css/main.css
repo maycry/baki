@@ -676,7 +676,8 @@ a:hover{
 .products-all-group .product-wrapper{
 	width: 32%;
 	display: inline-block;
-	margin-right: 1.3%
+	margin-right: 1.3%;
+  vertical-align: top;
 }
 .products-all-group .product-wrapper-3rd{
 	margin-right: 0;
@@ -742,9 +743,12 @@ a:hover{
 	margin-top: 40px;
 	margin-right: 20px;
 }
+.simple-page .slide{
+	padding-bottom: 77px;
+}
 .slide{
-	padding: 18px 6% 77px 7%;
-	position: relative;
+  padding: 18px 6% 77px 7%;
+  position: relative;
 }
 .slide .slide-content{
 	position: absolute;
@@ -756,6 +760,9 @@ a:hover{
   margin-bottom: 20px;
   overflow: hidden;
   position: relative;
+}
+.simple-page .slide .slide-content .slide-text{
+  width: 100%;
 }
 .slide .slide-content .slide-text:after{
   content: "";
@@ -898,7 +905,7 @@ a:hover{
 	content: "";
 	vertical-align: -7px;
 	display: inline-block;
-	width: 48px;
+	width: 44px;
 	height: 36px;
 	background: url(../images/all.png) no-repeat;
 }
@@ -1181,7 +1188,7 @@ a:hover{
 }
 
 
-html, body {
+html, body,.aspnetForm {
   height: 100%;
 }
 .page-wrapper {
@@ -1283,6 +1290,9 @@ select{
 .size-s{
   width: 110px;
 }
+.size-xs{
+  width: 50px;
+}
 select.size-l{
   width: 311px;
 }
@@ -1291,6 +1301,9 @@ select.size-m{
 }
 select.size-s{
   width: 121px;
+}
+select.size-xs{
+  width: 61px;
 }
 .watermarked{
   color: #aaa;
@@ -1319,7 +1332,7 @@ select.size-s{
 .form select{
   margin-right: 10px;
 }
-.form textarea{
+ textarea{
   outline: none;
   width: 300px;
 	padding: 7px 5px;
@@ -1667,8 +1680,8 @@ ui-icon ui-icon-circle-triangle-e
 .calc-price{
   text-align: center;
   position: absolute;
-  width: 13%;
-  padding: 23px 5% 19px;
+  width: 23%;
+  padding: 23px 0 19px;
   right: 0;
   top: 0;
   background-color: white;
@@ -1681,22 +1694,24 @@ ui-icon ui-icon-circle-triangle-e
   letter-spacing: 1px;
 }
 .calc-price .price .price-number{
-  font-size: 42px;
+  font-size: 28px;
   font-weight: bold;
   color: #f26522;
   margin-bottom: 22px;
 }
 .calc-price .price .currency{
-  font-size: 18px;
+  font-size: 12px;
   color: #b2b2b2;
-  vertical-align: 20px;
   margin-left: 5px;
   font-weight: normal;
   position: absolute;
+  margin-top: 2px;
 }
 .calc-price p{
   font-size: 13px;
   line-height: 18px;
+  width: 80%;
+  margin: 15px auto;
 }
 
 
@@ -1726,7 +1741,7 @@ ui-icon ui-icon-circle-triangle-e
   padding: 0 30px;
   font-size: 14px;
 }
-.button:hover, button:hover{
+.button:hover, button:hover, .button35:hover{
 	background: #f9a454; /* Old browsers */
 	background: -moz-linear-gradient(top,  #f9a454 0%, #f57724 75%, #f67d33 100%); /* FF3.6+ */
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f9a454), color-stop(75%,#f57724), color-stop(100%,#f67d33)); /* Chrome,Safari4+ */
@@ -1736,7 +1751,7 @@ ui-icon ui-icon-circle-triangle-e
 	background: linear-gradient(to bottom,  #f9a454 0%,#f57724 75%,#f67d33 100%); /* W3C */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9a454', endColorstr='#f67d33',GradientType=0 ); /* IE6-9 */
 }
-.button:active, button:active{
+.button:active, button:active, .button35:active{
 	box-shadow: 0 1px 3px #af4c15 inset;
 	background: #f79026; /* Old browsers */
 	background: -moz-linear-gradient(top, #f79026 0%, #f56c1c 100%); /* FF3.6+ */
@@ -1820,20 +1835,17 @@ ui-icon ui-icon-circle-triangle-e
 }
  .close_p{
   position: absolute;
-	width: 15px;
-  padding-left: 3px;
-	height: 19px;
+  width: 32px;
+  height: 32px;
+  background: url(../images/all.png) -49px -312px;
 	display: block;
 	right: 10px;
 	top: 9px;
 	cursor: pointer;
-  background-color: #f78221;
-  font-size: 14px;
-  color: white;
-  border-radius: 11px;
+  text-indent: -9999px;
 }
-.close_p:hover{
-  background-color: red;
+.close_p.ui-state-hover{
+  background-position: -82px -312px;
 }
 .overlay-login .overlay-popup{
 	width: 460px;
@@ -1842,7 +1854,7 @@ ui-icon ui-icon-circle-triangle-e
 	top: 20%;
 }
 .popup_title{
-  padding-left: 86px;
+  padding-left: 0px;
 }
 .popup_title span{
 	font-size: 21px;
