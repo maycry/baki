@@ -669,7 +669,7 @@ a:hover{
 /*---------All kasko products block--------*/
 .products-all-group{
 	min-height: 371px; 
-	margin-top: 30px;
+	margin-top: 27px;
 	margin-right: 20px;
 	text-align: center;
 }
@@ -686,10 +686,10 @@ a:hover{
 	text-align: left;
 	background-color:white;
 	box-shadow: 0 1px 2px rgba(0, 0, 0, .25);
-	margin: 10px 0 11px 0px;
+	margin: 13px 0 0px 0px;
 	border-radius: 4px;
 	padding: 25px 13% 25px 15%;
-	height: 125px;
+	height: 129px;
 }
 .product-wrapper:first-child .product{
 	background: white url(../images/buta1.png) no-repeat 90% 0;
@@ -704,7 +704,7 @@ a:hover{
 }
 .product-wrapper .product .product-content h3{
 	color: #f26522;
-	font-size: 24px;
+	font-size: 22px;
 	font-weight: bold;
 	margin: 0;
 	margin-bottom: 5px;
@@ -1832,6 +1832,7 @@ ui-icon ui-icon-circle-triangle-e
 	z-index: 6;
 	border-radius: 4px; 
 	padding: 30px 120px 40px 40px;
+  outline: none;
 }
  .close_p{
   position: absolute;
