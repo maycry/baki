@@ -565,6 +565,10 @@ a:hover{
 	text-decoration: none;
 	border-bottom: solid 1px #c9c9c9;
 }
+.menu-bottom nav a.active{
+  font-weight: bold;
+  border: none;
+}
 .menu-bottom nav a:hover{
 	border-bottom: solid 1px #4d4d4d;
 }
@@ -743,6 +747,9 @@ a:hover{
 	margin-top: 40px;
 	margin-right: 20px;
 }
+.simple-page{
+  margin-right: 20px !important;
+}
 .simple-page .slide{
 	padding-bottom: 77px;
 }
@@ -822,8 +829,51 @@ a:hover{
   background: white url(../images/buta4.png) no-repeat 104% 100%;
 }
 
-
-
+/*------------------Kabinet-------------*/
+.slider-kabinet .slide{
+  padding-bottom: 20px;
+}
+.slider-kabinet h2{
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+.slider-kabinet .slide-text p{
+  margin-top: 0px;
+}
+.rezult{
+  margin-top: 30px;
+  background: url(../images/border.png) repeat-x 0 18px;
+}
+.rezult a{
+  padding-right: 10px;
+  background-color: white;
+  border-bottom-width: 1px;
+  color: #f26221;
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;
+  line-height: 25px;
+  border: none;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  background-color: white;
+}
+.rezult a span{
+  border-bottom: 1px dashed #fcc097;
+}
+.rezult a span:hover{
+  border-bottom-color: #f26221;
+}
+.rezult:before{
+  content: "";
+  display: block;
+  width: 32px;
+  height: 24px;
+  background: url(../images/all.png) -201px -315px;
+  position: absolute;
+  margin-left: -32px;
+  margin-top: -1px;
+}
 .side-block{
 	background: white;
 	box-shadow: 0 1px 2px rgba(0, 0, 0, .25);
@@ -832,8 +882,107 @@ a:hover{
 	margin-left: 20px;
 	height: 371px;
 }
-
-
+.ui-jqgrid{
+  margin-left: -40px;
+  margin-bottom: 50px;
+}
+.ui-jqgrid td,.ui-jqgrid th{
+  padding: 5px 20px 5px 0;
+  font-size: 13px;
+  vertical-align: top;
+  text-align: left;
+  background: transparent;
+}
+.ui-jqgrid th{
+  color: #808080;
+}
+.ui-search-toolbar, .ui-search-toolbar th{
+  height: 0;
+  padding: 0
+}
+.ui-jqgrid td.sgcollapsed,.ui-jqgrid td.sgexpanded{
+  padding-right: 0;
+  text-align: center
+}
+.sgcollapsed a,.sgexpanded a{
+  border: none;
+}
+.sgcollapsed .ui-icon-plus:after,.sgexpanded .ui-icon-plus:after{
+  content: "+";
+  font-weight: bold;
+  font-size: 14px;
+  color: #f26221;
+  text-decoration: none;
+}
+.sgexpanded .ui-icon-plus:after{
+  content: "−";
+}
+.ui-jqgrid .tabParentControlID_8{
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  margin-bottom: 10px;
+}
+.ui-jqgrid .ui-tabs-nav{
+  margin: 0;
+  background-color: white;
+  list-style: none;
+  border-bottom: 1px solid #ddd;
+  padding: 10px 20px;
+}
+.ui-jqgrid .ui-tabs-nav li{
+  display: inline;
+  margin-right: 20px;
+}
+.ui-jqgrid .ui-tabs-nav a{
+  color: #f26221;
+  font-size: 13px;
+  font-weight: normal;
+  border-bottom-style: dashed;
+}
+.ui-jqgrid .ui-tabs-nav .ui-state-active a{
+  color: #808080;
+  border: none;
+}
+.ui-jqgrid .fridfirst{
+  color: #808080;
+  width: 200px;
+}
+.ui-jqgrid tr,.ui-jqgrid td,.ui-jqgrid th, .ui-jqgrid{
+  background: transparent !important;
+}
+.ui-jqgrid .subgrid-data{
+  padding-right: 0;
+}
+.ui-jqgrid .ui-tabs-panel{
+  padding: 10px 20px;
+}
+.ui-jqgrid .tabletabs{
+  table-layout: fixed;
+}
+.ui-jqgrid .ui-tabs-panel{
+  overflow-x:scroll;
+}
+.ui-jqgrid .innerFormTable td{
+  font-size: 12px;
+}
+.ui-jqgrid .innerFormTable .innerFormTableHeader{
+  font-size: 12px;
+  color: #808080;
+}
+.ui-jqgrid .griddrivers, .ui-jqgrid .gridrsh{
+  padding-right: 0;
+}
+#UserView_ .button35{
+  margin-right: 20px;
+}
+.slider-kabinet .form-bottom:before{
+  width: 4%;
+  left: -4%;
+}
+.slider-kabinet .form-bottom:after{
+  width: 4%;
+  right: -4%;
+}
 
 /*----------Top----------*/
 .side-block-top{
@@ -921,6 +1070,23 @@ a:hover{
 .side-block nav .product a:hover{
 	border-bottom: solid 1px black;
 }
+.kabinet-menu{
+  height: auto;
+}
+.kabinet-menu nav{
+  padding: 5px 14% 6px;
+}
+.kabinet-menu nav .kabinet-menu-line{
+  display: block;
+  margin-bottom: 20px;
+}
+.kabinet-menu nav .kabinet-menu-line.active a{
+  color: black;
+  pointer-events: none;
+  font-weight: bold;
+  border: none;
+}
+
 
 
 
@@ -1363,6 +1529,14 @@ select.size-xs{
   margin-bottom: 10px;
   margin-top: 10px;
 }
+.form .wizard_buttons{
+  padding: 25px 0px;
+  background-color: #f4f4f4;
+  border-radius: 3px;
+  margin-top: 50px;
+  height: 52px;
+  position: relative;
+}
 .form td.line{
   padding-bottom: 17px;
   vertical-align: bottom;
@@ -1804,7 +1978,8 @@ ui-icon ui-icon-circle-triangle-e
   .slide .slide-content .more:after,
   .field-group a:before,
   .form .calendar-date,
-  .form .wizard_step_title:before{
+  .form .wizard_step_title:before,
+  .rezult:before{
 		background-image: url(../images/all@2x.png);
 		background-size: 319px 472px;
 	}	
@@ -1915,7 +2090,6 @@ ui-icon ui-icon-circle-triangle-e
   height: 80%;
   overflow-y: scroll;
 }
-
 
 
 /*-----------Utils-------------*/
